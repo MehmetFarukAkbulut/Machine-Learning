@@ -3,10 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 veriler=pd.read_csv('eksikveriler.csv')
-
-
 print(veriler)
-
 
 #eksik veriler
 #sci kit learn
