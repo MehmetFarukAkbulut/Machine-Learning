@@ -23,3 +23,7 @@ le=preprocessing.LabelEncoder()
 
 ulke[:,0]=le.fit_transform(veriler.iloc[:,0])
 print(ulke)
+
+ohe= preprocessing.OneHotEncoder()
+ulke=ohe.fit_transform(ulke).toarray()
+print(ulke)
