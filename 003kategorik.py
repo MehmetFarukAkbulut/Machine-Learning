@@ -35,5 +35,7 @@ print(sonuc)
 sonuc2= pd.DataFrame(data=Yas,index=range(22),columns=['boy','kilo','yas'])
 print(sonuc2)
 
+cinsiyet=veriler.iloc[:,-1].values
+print(cinsiyet)
 
 
