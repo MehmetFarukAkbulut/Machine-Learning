@@ -31,3 +31,9 @@ print(ulke)
 
 sonuc= pd.DataFrame(data=ulke,index=range(22),columns=['fr','tr','us'])
 print(sonuc)
+
+sonuc2= pd.DataFrame(data=Yas,index=range(22),columns=['boy','kilo','yas'])
+print(sonuc2)
+
+
+
