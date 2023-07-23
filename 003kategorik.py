@@ -17,3 +17,6 @@ print(ulke)
 ohe= preprocessing.OneHotEncoder()
 ulke=ohe.fit_transform(ulke).toarray()
 print(ulke)
+
+sonuc= pd.DataFrame(data=ulke,index=range(22),columns=['fr','tr','us'])
+print(sonuc)
