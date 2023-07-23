@@ -38,4 +38,5 @@ print(sonuc2)
 cinsiyet=veriler.iloc[:,-1].values
 print(cinsiyet)
 
-
+sonuc3= pd.DataFrame(data=cinsiyet,index=range(22),columns=['cinsiyet'])
+print(sonuc3)
