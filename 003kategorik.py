@@ -40,3 +40,10 @@ print(cinsiyet)
 
 sonuc3= pd.DataFrame(data=cinsiyet,index=range(22),columns=['cinsiyet'])
 print(sonuc3)
+
+s=pd.concat([sonuc,sonuc2],axis=1)
+print(s)
+
+
+s2=pd.concat([s,sonuc3],axis=1)
+print(s2)
