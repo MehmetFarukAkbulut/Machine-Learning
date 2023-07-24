@@ -3,60 +3,60 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 veriler=pd.read_csv('eksikveriler.csv')
-print(veriler)
+# print(veriler)
 
 #eksik veriler
 #sci kit learn
 from sklearn.impute import SimpleImputer
 imputer= SimpleImputer(missing_values=np.nan,strategy='mean')
 Yas=veriler.iloc[:,1:4].values
-print(Yas)
+# print(Yas)
 imputer=imputer.fit(Yas[:,1:4])
 
 Yas[:,1:4]=imputer.transform(Yas[:,1:4])
-print(Yas)
+# print(Yas)
 
 ulke= veriler.iloc[:,0:1].values
-print(ulke)
+# print(ulke)
 
 from sklearn import preprocessing
 le=preprocessing.LabelEncoder()
 
 ulke[:,0]=le.fit_transform(veriler.iloc[:,0])
-print(ulke)
+# print(ulke)
 
 ohe= preprocessing.OneHotEncoder()
 ulke=ohe.fit_transform(ulke).toarray()
-print(ulke)
+# print(ulke)
 
 sonuc= pd.DataFrame(data=ulke,index=range(22),columns=['fr','tr','us'])
-print(sonuc)
+# print(sonuc)
 
 sonuc2= pd.DataFrame(data=Yas,index=range(22),columns=['boy','kilo','yas'])
-print(sonuc2)
+# print(sonuc2)
 
 cinsiyet=veriler.iloc[:,-1].values
-print(cinsiyet)
+# print(cinsiyet)
 
 sonuc3= pd.DataFrame(data=cinsiyet,index=range(22),columns=['cinsiyet'])
-print(sonuc3)
+# print(sonuc3)
 
 s=pd.concat([sonuc,sonuc2],axis=1)
-print(s)
+# print(s)
 
 
 s2=pd.concat([s,sonuc3],axis=1)
-print(s2)
+# print(s2)
 
 from sklearn.model_selection import train_test_split
 
 x_train,x_test,y_train,y_test=train_test_split(s,sonuc3,test_size=0.33,random_state=0) 
-print('/////////////////////////////////////////////////')
-print(x_train)
-print(x_test)
-print(y_train)
-print(y_test)
-print('/////////////////////////////////////////////////')
+# print('/////////////////////////////////////////////////')
+# print(x_train)
+# print(x_test)
+# print(y_train)
+# print(y_test)
+# print('/////////////////////////////////////////////////')
 
 
 
@@ -66,7 +66,7 @@ sc=StandardScaler()
 
 X_train=sc.fit_transform(x_train)
 X_test=sc.fit_transform(x_test)
-print('/////////////////////////////////////////////////')
-print(X_train)
-print(X_test)
-print('/////////////////////////////////////////////////')
+# print('/////////////////////////////////////////////////')
+# print(X_train)
+# print(X_test)
+# print('/////////////////////////////////////////////////')
