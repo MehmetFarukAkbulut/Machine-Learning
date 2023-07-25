@@ -22,5 +22,3 @@ class insan:
 ali = insan()
 print(ali.boy)
 print(ali.kosmak(90))
-
-l=[1,4,6]#liste
