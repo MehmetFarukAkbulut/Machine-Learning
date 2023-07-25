@@ -58,8 +58,6 @@ print(y_train)
 print(y_test)
 print('/////////////////////////////////////////////////')
 
-
-
 from sklearn.preprocessing import StandardScaler
 
 sc=StandardScaler()
