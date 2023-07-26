@@ -19,6 +19,7 @@ Yas[:,1:4]=imputer.transform(Yas[:,1:4])
 ulke= veriler.iloc[:,0:1].values
 # print(ulke)
 
+
 from sklearn import preprocessing
 le=preprocessing.LabelEncoder()
 
