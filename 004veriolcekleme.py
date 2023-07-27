@@ -68,3 +68,4 @@ X_test=sc.fit_transform(x_test)
 # print(X_train)
 # print(X_test)
 # print('/////////////////////////////////////////////////')
+
